@@ -1,4 +1,4 @@
-new Vue({
+const todoApp = new Vue({
   el: '#app',
   data: {
     newTodo: undefined,
@@ -8,10 +8,13 @@ new Vue({
     addTodo: function () {
       console.log(this);
       this.todos.push(this.newTodo);
-      this.newTodo = undefined;
+      this.newTodo = '';
     },
     remove: function (event) {
-      this.todos = this.todos.filter(todo => todo !== event.target.innerText);
+      const deletionText = event.target
+                                .parentElement.parentElement
+                                .innerText.slice(0, -7);
+      this.todos = this.todos.filter(todo => todo !== deletionText);
     },
   },
 });
