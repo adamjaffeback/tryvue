@@ -6,15 +6,14 @@ const todoApp = new Vue({
   },
   methods: {
     addTodo: function () {
-      console.log(this);
-      this.todos.push(this.newTodo);
+      this.todos.push({text: this.newTodo});
       this.newTodo = '';
     },
     remove: function (event) {
       const deletionText = event.target
                                 .parentElement.parentElement
                                 .innerText.slice(0, -7);
-      this.todos = this.todos.filter(todo => todo !== deletionText);
+      this.todos = this.todos.filter(todo => todo.text !== deletionText);
     },
   },
 });

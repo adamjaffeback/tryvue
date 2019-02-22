@@ -10,7 +10,7 @@
     <div id='app'>
       <h3 v-if="todos.count">Todos:</h3>
       <ol>
-        <li v-for="todo in todos">{{todo}} <span v-on:click='remove'><em>delete</em></span></li>
+        <li v-for="todo in todos">{{todo.text}} <span v-on:click='remove'><em>delete</em></span></li>
       </ol>
       <input v-model='newTodo' v-on:keyup.enter="addTodo">
     </div>
