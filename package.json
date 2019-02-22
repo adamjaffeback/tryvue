@@ -1,0 +1,22 @@
+{
+  "name": "tryvue",
+  "version": "1.0.0",
+  "description": "Learning Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamjaffeback/tryvue.git"
+  },
+  "keywords": [
+    "Vue"
+  ],
+  "author": "Adam Jaffe Back",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamjaffeback/tryvue/issues"
+  },
+  "homepage": "https://github.com/adamjaffeback/tryvue#readme"
+}
