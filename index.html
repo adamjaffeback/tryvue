@@ -8,8 +8,11 @@
   <script src="index.js" async></script>
   <body>
     <div id='app'>
-      <p v-bind:title='title'>{{ message }}</p>
-      <input v-model='message'>
+      <h3 v-if="todos.count">Todos:</h3>
+      <ol>
+        <li v-for="todo in todos" v-on:click='remove'>{{todo}}</li>
+      </ol>
+      <input v-model='newTodo' v-on:keyup.enter="addTodo">
     </div>
   </body>
 </html>
